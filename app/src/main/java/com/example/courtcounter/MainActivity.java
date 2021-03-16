@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(8);
+        displayForTeamA(0);
     }
     /**
      * Displays the given score for Team A.
@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for team A by 2 points.
      */
     public void addTwoForTeamA(View v) {
-        displayForTeamA(2);
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
     /**
      * Increase the score for team A by 1 points.
      */
     public void addOneForTeamA(View v) {
-        displayForTeamA(1);
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
     }
 }
