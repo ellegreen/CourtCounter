@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(0);
     }
     /**
      * Displays the given score for Team A.
@@ -72,6 +71,15 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOneForTeamB(View v) {
         scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
+    }
+    /**
+     * Resets the score for both teams back to 0.
+     */
+    public void resetScore(View v) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
     }
 }
